@@ -4,9 +4,82 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="scripts/jquery.3.7.0.min.js"></script>
+  <script src="scripts/jquery.smoothScroll.min.js"></script>
   <title>Anchor Smooth Scroll</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap');
+
+    /* html {
+      scroll-behavior: smooth;
+    } */
+
+    body {
+      font-family: 'Monterrat', sans-serif;
+    }
+    header a {
+      color: #fff;
+      padding: 10px 20px;
+      background-color: teal;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    p {
+      font-size: 1.5em;
+      line-height: 2em;
+    }
+    .btn-gototop {
+      color: #fff;
+      padding: 10px 20px;
+      background-color: coral;
+      border-radius: 20px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  
+  <div class="container">
+    <header>
+      <a href="#part1">html</a>
+      <a href="#part2">css</a>
+      <a href="#part3">jquery</a>
+      <a href="#part4">portfolio</a>
+    </header>
+    <h1 id="part1">html part</h1>
+    <hr>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, similique! Aspernatur laudantium quaerat eos deleniti distinctio culpa odio voluptatibus. A beatae nulla tenetur repellendus? Laboriosam expedita accusamus commodi quam corrupti! Lorem ipsum dolor, sit amet consectetur adipisicing elit. A similique perspiciatis enim totam, numquam nam, ipsa soluta atque minima, ab inventore fugiat expedita non. Dicta cumque repellat iusto ea ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ipsam nostrum, possimus illo recusandae placeat laboriosam distinctio asperiores nobis, consequuntur quisquam animi blanditiis. At saepe placeat nesciunt distinctio autem nam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum debitis nobis repellat ea quis id sunt sequi labore nisi aspernatur incidunt soluta, est corrupti accusamus ab vero, consectetur nam quam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus eum natus quaerat esse sapiente reprehenderit illum modi accusamus cupiditate rerum est blanditiis, facilis odit minima nulla ea sit! Dolores, mollitia.
+    </p>
+    <a href="#" class="btn-gototop">go to top</a>
+    <h1 id="part2">css part</h1>
+    <hr>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, similique! Aspernatur laudantium quaerat eos deleniti distinctio culpa odio voluptatibus. A beatae nulla tenetur repellendus? Laboriosam expedita accusamus commodi quam corrupti! Lorem ipsum dolor, sit amet consectetur adipisicing elit. A similique perspiciatis enim totam, numquam nam, ipsa soluta atque minima, ab inventore fugiat expedita non. Dicta cumque repellat iusto ea ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ipsam nostrum, possimus illo recusandae placeat laboriosam distinctio asperiores nobis, consequuntur quisquam animi blanditiis. At saepe placeat nesciunt distinctio autem nam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum debitis nobis repellat ea quis id sunt sequi labore nisi aspernatur incidunt soluta, est corrupti accusamus ab vero, consectetur nam quam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus eum natus quaerat esse sapiente reprehenderit illum modi accusamus cupiditate rerum est blanditiis, facilis odit minima nulla ea sit! Dolores, mollitia.
+    </p>
+    <a href="#" class="btn-gototop">go to top</a>
+    <h1 id="part3">jquery part</h1>
+    <hr>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, similique! Aspernatur laudantium quaerat eos deleniti distinctio culpa odio voluptatibus. A beatae nulla tenetur repellendus? Laboriosam expedita accusamus commodi quam corrupti! Lorem ipsum dolor, sit amet consectetur adipisicing elit. A similique perspiciatis enim totam, numquam nam, ipsa soluta atque minima, ab inventore fugiat expedita non. Dicta cumque repellat iusto ea ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ipsam nostrum, possimus illo recusandae placeat laboriosam distinctio asperiores nobis, consequuntur quisquam animi blanditiis. At saepe placeat nesciunt distinctio autem nam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum debitis nobis repellat ea quis id sunt sequi labore nisi aspernatur incidunt soluta, est corrupti accusamus ab vero, consectetur nam quam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus eum natus quaerat esse sapiente reprehenderit illum modi accusamus cupiditate rerum est blanditiis, facilis odit minima nulla ea sit! Dolores, mollitia.
+    </p>
+    <a href="#" class="btn-gototop">go to top</a>
+    <h1 id="part4">portfolio part</h1>
+    <hr>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, similique! Aspernatur laudantium quaerat eos deleniti distinctio culpa odio voluptatibus. A beatae nulla tenetur repellendus? Laboriosam expedita accusamus commodi quam corrupti! Lorem ipsum dolor, sit amet consectetur adipisicing elit. A similique perspiciatis enim totam, numquam nam, ipsa soluta atque minima, ab inventore fugiat expedita non. Dicta cumque repellat iusto ea ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ipsam nostrum, possimus illo recusandae placeat laboriosam distinctio asperiores nobis, consequuntur quisquam animi blanditiis. At saepe placeat nesciunt distinctio autem nam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum debitis nobis repellat ea quis id sunt sequi labore nisi aspernatur incidunt soluta, est corrupti accusamus ab vero, consectetur nam quam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus eum natus quaerat esse sapiente reprehenderit illum modi accusamus cupiditate rerum est blanditiis, facilis odit minima nulla ea sit! Dolores, mollitia.
+    </p>
+    <a href="#" class="btn-gototop">go to top</a>
+  </div>
+  <!-- Smooth Scroll -->
+  <script>
+    $('header a, .btn-gototop').click(function(){
+      $.smoothScroll({
+        scrollTarget: this.hash,
+        speed: 900
+      });
+      e.preventDefault();
+    })
+  </script>
+  <!-- Smooth Scroll -->
 </body>
 </html>
